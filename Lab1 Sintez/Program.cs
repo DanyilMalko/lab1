@@ -11,7 +11,7 @@ namespace Lab1_Sintez
             double L = A - B;
             double xm = (A + B) / 2;
             double x1=0, x2=0;
-            double Fxm = CalculateFunction(xm);
+            double Fxm = FunctionCalculate(xm);
             double Fx1, Fx2;
             double e = 0.001;
             int iteration = 0;
@@ -21,8 +21,8 @@ namespace Lab1_Sintez
                 x1 = A + L / 4;
                 x2 = B - L / 4;
 
-                Fx1 = CalculateFunction(x1);
-                Fx2 = CalculateFunction(x2);
+                Fx1 = FunctionCalculate(x1);
+                Fx2 = FunctionCalculate(x2);
 
                 if (Fx1 < Fxm)
                 {
@@ -53,7 +53,7 @@ namespace Lab1_Sintez
             Console.WriteLine("Result: x1={0}, x2={1}",x1,x2 );
         }
 
-        public static double CalculateFunction(double x)
+        public static double FunctionCalculate(double x)
         {
             double result;
             double e = 2.71828182846;
